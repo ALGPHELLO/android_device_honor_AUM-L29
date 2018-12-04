@@ -14,9 +14,9 @@
 # limitations under the License.
 #
 
-ifneq ($(filter AUM-L29,$(TARGET_DEVICE)),)
+ifneq ($(filter AUML29,$(TARGET_DEVICE)),)
 
-LOCAL_PATH := device/honor/AUM-L29/
+LOCAL_PATH := device/honor/AUML29/
 
 include $(call all-makefiles-under,$(LOCAL_PATH))
 
