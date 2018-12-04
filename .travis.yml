@@ -15,7 +15,7 @@ script:
   - |
     docker run --rm -i -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) -v "$(pwd):/home/twrp/:rw,z" yshalsager/lineageos:14.1 bash << EOF
     cd /home/twrp/
-    source build/envsetup.sh && lunch omni_AUML29-eng && make -j16 recoveryimage
+    source build/envsetup.sh && lunch omni_AUML29-eng && make -j32 recoveryimage
     exit
     EOF
 after_success:
