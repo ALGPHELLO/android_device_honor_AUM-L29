@@ -32,7 +32,7 @@ PRODUCT_PACKAGES += \
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := AUM-L29
-PRODUCT_NAME := omni_AUM-L29
+PRODUCT_NAME := omni_AUML29
 PRODUCT_BRAND := Honor
 PRODUCT_MODEL := Honor 7A
 PRODUCT_MANUFACTURER := Huawei 

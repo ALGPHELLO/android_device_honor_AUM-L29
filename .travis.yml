@@ -9,18 +9,18 @@ before_script:
   -O $HOME/twrp.tar.xz
 - tar -xJf twrp.tar.xz --directory $HOME/twrp/ && rm twrp.tar.xz
 script:
-  - cd $HOME/twrp/ && git clone https://github.com/TwrpBuilder/android_device_honor_7a.git device/honor/AUM-L29
+  - cd $HOME/twrp/ && git clone https://github.com/ALGPHELLO/android_device_honor_7a.git device/honor/AUM-L29
   - git clone https://github.com/TwrpBuilder/android_device_generic_twrpbuilder.git device/generic/twrpbuilder
   - rm -rf bootable/recovery && git clone https://github.com/omnirom/android_bootable_recovery.git bootable/recovery
   - |
     docker run --rm -i -e USER_ID=$(id -u) -e GROUP_ID=$(id -g) -v "$(pwd):/home/twrp/:rw,z" yshalsager/lineageos:14.1 bash << EOF
     cd /home/twrp/
-    source build/envsetup.sh && lunch omni_AUM-L29-eng && make -j16 recoveryimage
+    source build/envsetup.sh && lunch omni_AUML29-eng && make -j16 recoveryimage
     exit
     EOF
 after_success:
   - export version=$(cat bootable/recovery/variables.h | grep "define TW_MAIN_VERSION_STR" | cut -d '"' -f2)
-  - cp $HOME/twrp/out/target/product/AUM-L29/recovery.img $HOME/twrp/TWRP-$version-AUM-L29-$(date +"%Y%m%d").img
+  - cp $HOME/twrp/out/target/product/AUML29/recovery.img $HOME/twrp/TWRP-$version-AUML29-$(date +"%Y%m%d").img
 
 deploy:
   skip_cleanup: true
