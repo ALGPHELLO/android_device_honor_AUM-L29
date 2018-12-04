@@ -14,7 +14,7 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/honor/AUM-L29
+LOCAL_PATH := device/honor/AUML29
 
 # Architecture
 TARGET_ARCH := arm64

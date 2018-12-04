@@ -31,7 +31,7 @@ PRODUCT_PACKAGES += \
     charger_res_images
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := AUM-L29
+PRODUCT_DEVICE := AUML29
 PRODUCT_NAME := omni_AUML29
 PRODUCT_BRAND := Honor
 PRODUCT_MODEL := Honor 7A

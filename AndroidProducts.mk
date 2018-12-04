@@ -14,6 +14,6 @@
 # limitations under the License.
 #
 
-LOCAL_PATH := device/honor/AUM-L29/
+LOCAL_PATH := device/honor/AUML29/
 
 PRODUCT_MAKEFILES := $(LOCAL_PATH)/omni_AUML29.mk
